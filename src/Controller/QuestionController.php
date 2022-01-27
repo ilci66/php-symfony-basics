@@ -14,6 +14,16 @@ class QuestionController
     {
         return new Response('HOME');
     }
+
+    /**
+    * @Route("/questions/{slug}")
+    */
+    public function show($slug)
+    {
+        return new Response(sprintf(
+            '%s?, hmm... looking for an answer',
+            str_replace('-', ' ', $slug)));
+    }
 }
 
 ?>
