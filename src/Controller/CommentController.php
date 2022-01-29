@@ -10,7 +10,7 @@ class CommentController extends AbstractController
 {
 
     /**
-     * @Route("/comments/{id}/vote/{direction}")
+     * @Route("/comments/{id<\d+>}/vote/{direction<up|down>}", methods="POST")
      */
     public function commentVote($id, $direction)
     {
